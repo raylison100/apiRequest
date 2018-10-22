@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ceee910-1cb6-4209-ba30-a7721ec5e074" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/API-Request.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/API-Request.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BuscaController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,46 +65,50 @@
     <session id="-1833337099">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="md" value="2" />
-          <entry key="php" value="13" />
+          <entry key="json" value="2" />
+          <entry key="lock" value="1" />
+          <entry key="md" value="3" />
+          <entry key="php" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="Markdown" value="2" />
-          <entry key="PHP" value="13" />
+          <entry key="JSON" value="3" />
+          <entry key="Markdown" value="3" />
+          <entry key="PHP" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="19" />
           <entry key="md" value="53" />
-          <entry key="php" value="3441" />
+          <entry key="php" value="3954" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="19" />
           <entry key="Markdown" value="53" />
-          <entry key="PHP" value="3441" />
+          <entry key="PHP" value="3954" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="1" />
+          <entry key="PHP Class.type" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -116,8 +124,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            <state relative-caret-position="394">
+              <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/BuscaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -151,6 +168,10 @@
         <option value="$PROJECT_DIR$/a.php" />
         <option value="$PROJECT_DIR$/api.php" />
         <option value="$PROJECT_DIR$/BuscaController.php" />
+        <option value="$PROJECT_DIR$/voos/voos.php" />
+        <option value="$PROJECT_DIR$/com.controller/BuscaController.php" />
+        <option value="$PROJECT_DIR$/src/index.php" />
+        <option value="$PROJECT_DIR$/src/controller/BuscaController.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -175,6 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,11 +204,21 @@
               <item name="API-Request" type="b2602c69:ProjectViewProjectNode" />
               <item name="API-Request" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="API-Request" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API-Request" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="API-Request" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API-Request" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,14 +230,16 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/routes" />
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/routes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/com.public" />
+      <recent name="$PROJECT_DIR$/routes" />
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -240,18 +274,20 @@
       <workItem from="1539874830443" duration="47000" />
       <workItem from="1539875154028" duration="2276000" />
       <workItem from="1539947322145" duration="3443000" />
-      <workItem from="1539950944204" duration="9002000" />
+      <workItem from="1539950944204" duration="11999000" />
+      <workItem from="1540208731698" duration="850000" />
+      <workItem from="1540210582003" duration="8945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39178000" />
+    <option name="totallyTimeSpent" value="51970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="836" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13706563" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14092664" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -264,7 +300,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32719547" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32577905" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -285,25 +321,57 @@
     <entry file="file://$PROJECT_DIR$/../../index.html" />
     <entry file="file://$PROJECT_DIR$/service/index.html" />
     <entry file="file://$PROJECT_DIR$/routes/web.php" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="39" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Router.php" />
     <entry file="file://$PROJECT_DIR$/rec.php" />
     <entry file="file://$PROJECT_DIR$/a.php" />
     <entry file="file://$PROJECT_DIR$/api.php" />
     <entry file="file://$PROJECT_DIR$/BuscaController.php" />
+    <entry file="file://$PROJECT_DIR$/voos/voos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3195" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="39" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/BuscaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state relative-caret-position="394">
+          <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
         </state>
       </provider>
     </entry>

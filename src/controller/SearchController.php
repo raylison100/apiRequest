@@ -53,6 +53,7 @@ class SearchController
 
 
                     $response  =  $this->client -> request ( 'GET' ,  'https://gateway.buscaaereo.com.br/psv/airports' );
+                    header('Content-Type: application/json');
 
                 } catch (RequestException  $e) {
                     //(connection timeout, DNS errors, etc.)

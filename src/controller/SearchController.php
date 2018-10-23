@@ -8,7 +8,7 @@
 
 use GuzzleHttp\Client;
 
-class BuscaController
+class SearchController
 {
 
     private $client;
@@ -19,55 +19,55 @@ class BuscaController
         $this->client = new Client();
     }
 
-    private function rederect($url)
+    public function redirection($url)
     {
 
 
         switch ($url["path"]) {
             case '/airports':
 
-                $url2 = "https://gateway.buscaaereo.com.br/psv/";
+                //$url2 = "https://gateway.buscaaereo.com.br/psv/";
 
-                /*//Ultilizando biblioteca Curl
+                /*//Using Curl library
 
-                //Inicializa cURL para uma URL.
+                //Initializes cURL for a URL.
                 $ch = curl_init($url2);
-                //Marca que vai receber string
+                //Brand that will receive string
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                //Inicia a conexão
+                //Starts the connection
                 $result = curl_exec($ch);
-                //Fecha a conexão
+                //Close the connection
                 curl_close($ch);
                 echo $result;*/
 
 
-                //Ultilizando cliente HTTP Guzzle
+                //Using HTTP Guzzle Client
 
                 try {
-                    /*// Cria um cliente com uma base URI
+                    /*//Create a client with a base URI
                     $client = new  GuzzleHttp \ Client (['base_uri' => $url2]);
-                    // Envie um pedido para "https://gateway.buscaaereo.com.br/psv/airports"
+                    //Send a request to "https://gateway.buscaaereo.com.br/psv/airports"
                     $response = $client->request('GET', 'airports');*/
 
-                    // outra opção
+                    // another option
 
 
                     $response  =  $this->client -> request ( 'GET' ,  'https://gateway.buscaaereo.com.br/psv/airports' );
 
                 } catch (RequestException  $e) {
-                    //(tempo limite de conexão, erros de DNS, etc.)
+                    //(connection timeout, DNS errors, etc.)
                     echo Psr7 \ str($e->getRequest());
                     if ($e->hasResponse()) {
                         echo Psr7 \ str($e->getResponse());
                     }
 
                 } catch (ClientException  $e) {
-                    //Lançado para erros de nível 400
+                    //Launched for level 400 errors
                     echo Psr7 \ str($e->getRequest());
                     echo Psr7 \ str($e->getResponse());
 
                 } catch (ServerException $e){
-                    //Lançado para erros de nível 500
+                    //Launched for level 500 errors
                     echo Psr7 \ str($e->getRequest());
                     echo Psr7 \ str($e->getResponse());
                 }
@@ -75,42 +75,40 @@ class BuscaController
                 if ($response->getStatusCode() == '200') {
                     echo $response->getBody();
                 } else
-                    echo 'Sistema indisponivel';
+                    echo 'System Unavailable';
                 break;
 
             default:
 
-                echo 'ROTA NÂO PERMITIDA' . "\n";
+                echo 'ROUTE NOT ALLOWED' . "\n";
 
                 break;
         }
     }
 
-    private function descobreMetodo()
+    public function discoversMethod()
     {
 
-        $requisicao = $_SERVER['REQUEST_METHOD'];
-        return $requisicao;
+        $request = $_SERVER['REQUEST_METHOD'];
+        return $request;
     }
 
-    private function descobreURL()
+    public function discoversURL()
     {
 
-        $dominio = $_SERVER['HTTP_HOST'];
-        $url = $dominio . $_SERVER['REQUEST_URI'];
+        //$domain = $_SERVER['HTTP_HOST'];
+        $url = $_SERVER['REQUEST_URI'];
+
         return $url;
     }
 
-    private function validaRequicao()
+    public function validRequest()
     {
 
-        $metodo = $this->descobreMetodo();
+        $method = $this->discoversMethod();
 
-        switch ($metodo) {
+        switch ($method) {
 
-            case 'POST':
-                return true;
-                break;
             case 'GET':
                 return true;
                 break;
@@ -120,21 +118,21 @@ class BuscaController
 
     }
 
-    private function quebraURL()
+    public function smashURL()
     {
-        //url de solicitação
-        $simplesURL = (parse_url($this->descobreURL()));
-        return $simplesURL;
+        //Request URl
+        $simpleURL = (parse_url($this->discoversURL()));
+        return $simpleURL;
 
     }
 
-    public function selectVoos()
+    public function selectFlight()
     {
 
-        if ($this->validaRequicao()) {
-            $this->rederect($this->quebraURL());
+        if ($this->validRequest()) {
+            $this->redirection($this->smashURL());
         } else
-            echo "Requição não permitida";
+            echo "Required not allowed";
 
     }
 }

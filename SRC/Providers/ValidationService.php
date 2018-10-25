@@ -5,6 +5,7 @@
  * Date: 24/10/2018
  * Time: 20:21
  */
+
 namespace SRC\Providers;
 
 class ValidationService
@@ -12,7 +13,22 @@ class ValidationService
     private $method;
     private $pathURL;
 
-    function __construct($getMethod, $getPathURL)
+    public static $instance;
+
+    private function __construct()
+    {
+        self::$instance = $this;
+    }
+
+    public static function get()
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    function load($getMethod, $getPathURL)
     {
         $this->method = $getMethod;
         $this->pathURL = $getPathURL;
@@ -51,5 +67,13 @@ class ValidationService
                 return false;
                 break;
         }
+    }
+
+    public function validationPermission()
+    {
+        if ($this->validationMethod() && $this->validationURL())
+            return true;
+        else
+            return false;
     }
 }

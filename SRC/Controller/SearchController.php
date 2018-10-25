@@ -17,10 +17,24 @@ class SearchController
     private $headers;
     private $url;
     private $endPoint;
+    public static $instance;
 
-
-    function __construct($httpMethod, $httpHeaders, $httpURL)
+    private function __construct()
     {
+        self::$instance = $this;
+    }
+
+    public static function get()
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    public function load($httpMethod, $httpHeaders, $httpURL)
+    {
+
         $this->method = $httpMethod;
         $this->headers = $httpHeaders;
         $this->url = $httpURL;

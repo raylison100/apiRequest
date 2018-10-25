@@ -14,36 +14,21 @@ use SRC\Providers\ValidationService;
 
 class App
 {
-    private $method;
-    private $headers;
-    private $url;
+    public function load()
+    {
+        ValidationService::get()->load(SearchBreakService::get()->getDiscoversMethod(), SearchBreakService::get()->getSmashURL());
+    }
 
     public function run()
     {
         $this->load();
 
-        if ($this->validation()) {
+        if (ValidationService::get()->validationPermission()) {
 
-            $controller = new SearchController($this->method, $this->headers, $this->url);
-            $controller->index();
+            SearchController::get()->load(SearchBreakService::get()->getDiscoversMethod(), SearchBreakService::get()->getRequestHeaders(), SearchBreakService::get()->getSmashURL());
+            SearchController::get()->index();
         }
     }
 
-    public function load()
-    {
-        $seachBreak = new SearchBreakService();
-        $this->method = $seachBreak->getDiscoversMethod();
-        $this->url = $seachBreak->getSmashURL();
-        $this->headers = $seachBreak->getRequestHeaders();
-    }
 
-    public function validation()
-    {
-
-        $validation = new ValidationService($this->method, $this->url);
-        if ($validation->validationMethod() && $validation->validationURL())
-            return true;
-        else
-            return false;
-    }
 }

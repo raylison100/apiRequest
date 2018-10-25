@@ -7,6 +7,7 @@
  * @param $className
  */
 
-spl_autoload_register(function ($class) {;
-    require_once(DIR . DS . $class.".php");
+spl_autoload_register(function ($class) {
+
+    require_once(DIR . DS . str_replace('\\', '/', $class).".php");
 });

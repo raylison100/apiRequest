@@ -11,6 +11,21 @@ namespace SRC\Providers;
 class SearchBreakService
 {
 
+    public static $instance;
+
+    private function __construct()
+    {
+        self::$instance = $this;
+    }
+
+    public static function get()
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
     public function getDiscoversMethod()
     {
         $request = $_SERVER['REQUEST_METHOD'];

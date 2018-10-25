@@ -44,13 +44,26 @@ class SearchController
 
     public function index()
     {
-        $response = $this->client->request($this->method, $this->endPoint);
-        header('Content-Type: application/json');
-        echo $response->getBody();
+
+       $response = $this->client->request($this->method, $this->endPoint, $this->headers);
+       header('Content-Type: application/json');
+       echo $response->getBody();
+       echo $response->getHeader();
     }
 
     public function setEndPoint()
     {
-        $this->endPoint = 'https://gateway.buscaaereo.com.br/psv/airports';
+        switch ($this->url['path']) {
+            case '/airports':
+                return $this->endPoint = 'https://gateway.buscaaereo.com.br/psv/airports';
+                break;
+            case '/cadastrar':
+                return $this->endPoint = 'http://dev.laravel:8000/cadastrar';
+                break;
+            default:
+                return "";
+                break;
+        }
+
     }
 }

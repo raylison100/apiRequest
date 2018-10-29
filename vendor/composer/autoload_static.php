@@ -16,6 +16,7 @@ class ComposerStaticInit8e2ef7f2ea51e9f5ec827a900ec2a9d4
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'G' => 
         array (
@@ -29,6 +30,10 @@ class ComposerStaticInit8e2ef7f2ea51e9f5ec827a900ec2a9d4
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ceee910-1cb6-4209-ba30-a7721ec5e074" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/API-Request.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/API-Request.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/Controller/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/Controller/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/Providers/SearchBreakService.php" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/Providers/SearchBreakService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRC/Providers/ValidationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/SRC/Providers/ValidationURLService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +88,7 @@
           <entry key="htaccess" value="1" />
           <entry key="htaccess&quot;" value="1" />
           <entry key="html" value="1" />
-          <entry key="json" value="5" />
+          <entry key="json" value="6" />
           <entry key="lock" value="3" />
           <entry key="md" value="6" />
           <entry key="php" value="39" />
@@ -94,7 +97,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JSON" value="8" />
+          <entry key="JSON" value="9" />
           <entry key="Markdown" value="6" />
           <entry key="PHP" value="39" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -105,6 +108,7 @@
         <counts>
           <entry key="dummy" value="6" />
           <entry key="html" value="19" />
+          <entry key="json" value="5" />
           <entry key="md" value="53" />
           <entry key="php" value="5468" />
         </counts>
@@ -112,6 +116,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="19" />
+          <entry key="JSON" value="5" />
           <entry key="Markdown" value="53" />
           <entry key="PHP" value="5468" />
           <entry key="PLAIN_TEXT" value="6" />
@@ -141,6 +146,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SRC/App.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -161,18 +175,6 @@
               <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SRC/Providers/SearchBreakService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,6 +223,7 @@
         <option value="$PROJECT_DIR$/SRC/App.php" />
         <option value="$PROJECT_DIR$/SRC/Controller/SearchController.php" />
         <option value="$PROJECT_DIR$/SRC/Providers/SearchBreakService.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -240,6 +243,7 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -351,12 +355,12 @@
       <workItem from="1540552253032" duration="2558000" />
       <workItem from="1540561977282" duration="4641000" />
       <workItem from="1540569832979" duration="650000" />
-      <workItem from="1540811436918" duration="2271000" />
+      <workItem from="1540811436918" duration="3340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82609000" />
+    <option name="totallyTimeSpent" value="83678000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,7 +375,7 @@
     <frame x="0" y="25" width="1600" height="836" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13899614" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13899614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -384,7 +388,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.31586403" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31586403" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -412,7 +416,6 @@
     <entry file="file://$PROJECT_DIR$/BuscaController.php" />
     <entry file="file://$PROJECT_DIR$/voos/voos.php" />
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php" />
-    <entry file="file://$PROJECT_DIR$/composer.json" />
     <entry file="file://$PROJECT_DIR$/composer.lock" />
     <entry file="file://$PROJECT_DIR$/&quot;.htaccess&quot;" />
     <entry file="file://$PROJECT_DIR$/.htaccess" />
@@ -458,20 +461,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/SRC/Providers/SearchBreakService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SRC/App.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="669">
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
-            <element signature="e#110#146#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -486,13 +481,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SRC/Providers/SearchBreakService.php">
+    <entry file="file://$PROJECT_DIR$/SRC/App.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
+            <element signature="e#110#146#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
         </state>
       </provider>
     </entry>

@@ -15,7 +15,6 @@ class SearchController
     private $client;
     private $method;
     private $headers;
-    private $url;
     private $endPoint;
     public static $instance;
 
@@ -32,38 +31,20 @@ class SearchController
         return self::$instance;
     }
 
-    public function load($httpMethod, $httpHeaders, $httpURL)
+    public function load($httpMethod, $httpHeaders, $httpEndPoint)
     {
 
         $this->method = $httpMethod;
         $this->headers = $httpHeaders;
-        $this->url = $httpURL;
-        $this->setEndPoint();
+        $this->endPoint = $httpEndPoint;
         $this->client = new Client();
     }
 
     public function index()
     {
 
-       $response = $this->client->request($this->method, $this->endPoint, $this->headers);
-       header('Content-Type: application/json');
-       echo $response->getBody();
-       echo $response->getHeader();
-    }
-
-    public function setEndPoint()
-    {
-        switch ($this->url['path']) {
-            case '/airports':
-                return $this->endPoint = 'https://gateway.buscaaereo.com.br/psv/airports';
-                break;
-            case '/cadastrar':
-                return $this->endPoint = 'http://dev.laravel:8000/cadastrar';
-                break;
-            default:
-                return "";
-                break;
-        }
-
+        $response = $this->client->request($this->method, $this->endPoint, $this->headers);
+        header('Content-Type: application/json');
+        echo $response->getBody();
     }
 }

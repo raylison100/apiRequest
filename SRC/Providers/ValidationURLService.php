@@ -8,7 +8,7 @@
 
 namespace SRC\Providers;
 
-class ValidationService
+class ValidationURLService
 {
     private $method;
     private $pathURL;

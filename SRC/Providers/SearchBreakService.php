@@ -50,4 +50,20 @@ class SearchBreakService
         }
         return $headers;
     }
+
+    public function getEndPoint()
+    {
+
+        switch ($this->getSmashURL()['path']) {
+            case '/airports':
+                return 'https://gateway.buscaaereo.com.br/psv/airports';
+                break;
+            case '/getConteudo':
+                return 'http://localhost:3000/view/Conteudo/listar.php';
+                break;
+            default:
+                return '';
+                break;
+        }
+    }
 }

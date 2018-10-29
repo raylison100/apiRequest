@@ -10,22 +10,22 @@ namespace SRC;
 
 use SRC\Controller\SearchController;
 use SRC\Providers\SearchBreakService;
-use SRC\Providers\ValidationService;
+use SRC\Providers\ValidationURLService;
 
 class App
 {
     public function load()
     {
-        ValidationService::get()->load(SearchBreakService::get()->getDiscoversMethod(), SearchBreakService::get()->getSmashURL());
+        ValidationURLService::get()->load(SearchBreakService::get()->getDiscoversMethod(), SearchBreakService::get()->getSmashURL());
     }
 
     public function run()
     {
         $this->load();
 
-        if (ValidationService::get()->validationPermission()) {
+        if (ValidationURLService::get()->validationPermission()) {
 
-            SearchController::get()->load(SearchBreakService::get()->getDiscoversMethod(), SearchBreakService::get()->getRequestHeaders(), SearchBreakService::get()->getSmashURL());
+            SearchController::get()->load(SearchBreakService::get()->getDiscoversMethod(), SearchBreakService::get()->getRequestHeaders(), SearchBreakService::get()->getEndPoint());
             SearchController::get()->index();
         }
     }

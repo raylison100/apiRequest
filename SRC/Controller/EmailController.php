@@ -51,7 +51,9 @@ class EmailController
         $this->mail->setFrom($this->headers[Sender],$this->headers[SenderName]); //Set who the message is to be sent from
         $this->mail->addAddress($this->headers[Recipient], $this->headers[RecipientName]); //Set who the message is to be sent to
         $this->mail->Subject = $this->headers[Subject]; //Set the subject line
-        $this->mail->Body = $this->headers[Body];
+        $this->mail->IsHTML(true);
+        $this->mail->Body ="<h1>Test 1 of PHPMailer html</h1>
+        <p> {$this->headers[Body]}</p>";
         $this->mail->AltBody = $this->headers[AltBody]; //Replace the plain text body with one created manually
         $this->mail->ConfirmReadingTo;
         //send the message, check for errors

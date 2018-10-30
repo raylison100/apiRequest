@@ -8,6 +8,7 @@
 
 namespace SRC;
 
+use SRC\Controller\EmailController;
 use SRC\Controller\SearchController;
 use SRC\Providers\SearchBreakService;
 use SRC\Providers\ValidationURLService;
@@ -23,10 +24,15 @@ class App
     {
         $this->load();
 
-        if (ValidationURLService::get()->validationPermission()) {
+        if (ValidationURLService::get()->validationPermission() === 'SearchController') {
 
             SearchController::get()->load(SearchBreakService::get()->getDiscoversMethod(), SearchBreakService::get()->getRequestHeaders(), SearchBreakService::get()->getEndPoint());
             SearchController::get()->index();
+        }elseif (ValidationURLService::get()->validationPermission() === 'EmailController'){
+            EmailController::get()->load(SearchBreakService::get()->getRequestHeaders());
+            EmailController::get()->index();
+        }else{
+            echo "Route not allowed";
         }
     }
 

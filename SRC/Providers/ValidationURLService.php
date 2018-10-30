@@ -8,6 +8,9 @@
 
 namespace SRC\Providers;
 
+use SRC\Controller\EmailController;
+use SRC\Controller\SearchController;
+
 class ValidationURLService
 {
     private $method;
@@ -39,41 +42,44 @@ class ValidationURLService
 
         switch ($this->method) {
             case 'GET':
-                return true;
+                return $this->validationURLGET();
                 break;
             case 'POST':
-                return true;
+                return $this->validationURLPOST();
                 break;
             case 'PUT':
-                return true;
+                return '';
                 break;
             case 'DELETE':
-                return false;
+                return '';
                 break;
             default:
-                return false;
+                return '';
                 break;
         }
     }
 
-    public function validationURL()
+    public function validationURLGET()
+    {
+        switch ($this->pathURL['path']) {
+            case '/airports':
+                return 'SearchController';
+                break;
+        }
+    }
+
+    public function validationURLPOST()
     {
 
         switch ($this->pathURL['path']) {
-            case '/airports':
-                return true;
-                break;
-            default:
-                return false;
+            case '/submit':
+                return 'EmailController';
                 break;
         }
     }
 
     public function validationPermission()
     {
-        if ($this->validationMethod() && $this->validationURL())
-            return true;
-        else
-            return false;
+        return $this->validationMethod();
     }
 }

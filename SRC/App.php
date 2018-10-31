@@ -29,15 +29,18 @@ class App
 
             SearchController::get()->load(SearchBreakService::get()->getDiscoversMethod(), SearchBreakService::get()->getRequestHeaders(), SearchBreakService::get()->getEndPoint());
             SearchController::get()->index();
+
         } elseif (ValidationURLService::get()->validationPermission() === 'EmailController') {
+
             EmailController::get()->load(SearchBreakService::get()->getRequestHeaders());
             EmailController::get()->index();
+
         } elseif (ValidationURLService::get()->validationPermission() === 'LogService') {
+
             LogService::get()->index();
+
         } else {
             echo "Route not allowed";
         }
     }
-
-
 }

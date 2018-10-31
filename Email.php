@@ -9,8 +9,8 @@
         <h1>Email enviado</h1>
         <img src="imagem.png">
         <img
-                src="http://api.request:8000/logoImg"
-                onerror="this.style.display='none'"
+            src="http://api.request:8000/logoImg"
+            onerror="this.style.display='none'"
         />
     </body>
 </html>

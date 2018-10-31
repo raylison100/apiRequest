@@ -65,6 +65,9 @@ class ValidationURLService
             case '/airports':
                 return 'SearchController';
                 break;
+            case '/logoImg':
+                return 'LogService';
+                break;
         }
     }
 

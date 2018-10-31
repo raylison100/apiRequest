@@ -37,10 +37,10 @@ class EmailController
         $this->mail = new PHPMailer; //Create a new PHPMailer instance
     }
 
-    public function index()    {
+    public function index()
+    {
 
-
-        $this->mail->isSMTP();//Tell PHPMailer to use SMTP
+        /*$this->mail->isSMTP();//Tell PHPMailer to use SMTP
         $this->mail->SMTPDebug = 0; //Enable SMTP debugging 0 = off (for production use),1 = client messages, 2 = client and server messages
         $this->mail->Host = 'smtp.gmail.com'; //Set the hostname of the mail server
         $this->mail->Port = 587; //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
@@ -52,8 +52,9 @@ class EmailController
         $this->mail->addAddress($this->headers[Recipient], $this->headers[RecipientName]); //Set who the message is to be sent to
         $this->mail->Subject = $this->headers[Subject]; //Set the subject line
         $this->mail->IsHTML(true);
-        $this->mail->Body ="<h1>Test 1 of PHPMailer html</h1>
-        <p> {$this->headers[Body]}</p>";
+        $this->mail->Body =
+            "<h1>Test 1 of PHPMailer html</h1>
+            <p> {$this->headers[Body]}</p>";
         $this->mail->AltBody = $this->headers[AltBody]; //Replace the plain text body with one created manually
         $this->mail->ConfirmReadingTo;
         //send the message, check for errors
@@ -61,6 +62,8 @@ class EmailController
             echo "Mailer Error: " . $this->mail->ErrorInfo;
         } else {
             echo "Message sent!";
-        }
+        }*/
+
+        echo "http://api.request:8000/Email.php";
     }
 }

@@ -10,6 +10,7 @@ namespace SRC;
 
 use SRC\Controller\EmailController;
 use SRC\Controller\SearchController;
+use SRC\Providers\LogService;
 use SRC\Providers\SearchBreakService;
 use SRC\Providers\ValidationURLService;
 
@@ -28,10 +29,12 @@ class App
 
             SearchController::get()->load(SearchBreakService::get()->getDiscoversMethod(), SearchBreakService::get()->getRequestHeaders(), SearchBreakService::get()->getEndPoint());
             SearchController::get()->index();
-        }elseif (ValidationURLService::get()->validationPermission() === 'EmailController'){
+        } elseif (ValidationURLService::get()->validationPermission() === 'EmailController') {
             EmailController::get()->load(SearchBreakService::get()->getRequestHeaders());
             EmailController::get()->index();
-        }else{
+        } elseif (ValidationURLService::get()->validationPermission() === 'LogService') {
+            LogService::get()->index();
+        } else {
             echo "Route not allowed";
         }
     }
